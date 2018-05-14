@@ -1,6 +1,7 @@
-#_*_coding:utf-8_*_
+#coding=utf-8
 __metaclass__ = type
 import shelve
+from urllib import urlopen
 
 class MemberCounter:
     members = 0
@@ -52,6 +53,8 @@ def main():
     listS = [0,1,2,3,1,2,3,4,5,6,7,8,9,7,4,5,6]
     print set(listS)
     testShelve()
+    webPage = urlopen('https://www.baidu.com/')
+    print webPage.read()
     pass
 if __name__ == '__main__':
     main()
